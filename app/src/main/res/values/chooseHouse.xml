@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="chooseHouse">
+        <item>雪松苑</item>
+        <item>不知道</item>
+        <item>不知道</item>
+        <item>不知道</item>
+    </string-array>
+    <string-array name="chooseHouseId">
+        <item>A1</item>
+        <item>A2</item>
+        <item>A3</item>
+        <item>A4</item>
+    </string-array>
+</resources>

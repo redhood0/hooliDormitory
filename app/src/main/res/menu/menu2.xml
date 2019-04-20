@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/bottom_search"
+            android:icon="@drawable/search"
+            android:orderInCategory="1"
+            android:title="查询" />
+        <item
+            android:id="@+id/bottom_giveFen"
+            android:icon="@drawable/givefen"
+            android:orderInCategory="2"
+            android:title="打分" />
+
+        <item
+            android:id="@+id/bottom_more"
+            android:icon="@drawable/more"
+            android:orderInCategory="3"
+            android:title="更多" />
+        <item
+            android:id="@+id/bottom_setting"
+            android:icon="@drawable/setting"
+            android:orderInCategory="4"
+            android:title="设置" />
+
+
+    </group>
+</menu>
+

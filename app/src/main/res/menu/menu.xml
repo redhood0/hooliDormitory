@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_first_fragment"
+            android:icon="@drawable/home"
+            android:checked="true"
+            android:title="主页" />
+        <item
+            android:id="@+id/nav_second_fragment"
+            android:icon="@drawable/search"
+            android:title="设置" />
+        <item
+            android:id="@+id/nav_third_fragment"
+            android:icon="@drawable/more"
+            android:title="更多" />
+        <item android:title="宿舍管理">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_home_search"
+                        android:icon="@drawable/search"
+                        android:title="查询宿舍" />
+                    <item
+                        android:id="@+id/nav_home_giveFraction"
+                        android:icon="@drawable/givefen"
+                        android:title="宿舍打分" />
+                    <item
+                        android:id="@+id/nav_home_ischeck"
+                        android:icon="@drawable/setting"
+                        android:title="宿舍查寝" />
+                </group>
+            </menu>
+        </item>
+    </group>
+</menu>
+
