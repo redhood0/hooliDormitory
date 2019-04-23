@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="top|left"
+        android:textSize="17sp"
+        android:text="宿舍号：雪松苑 A4 308"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="20dp"
+        android:textSize="17sp"
+        android:text="宿舍长： 李大飞"
+        />
+</FrameLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/gray"
+            android:layout_gravity="top|left"
+            android:textSize="20sp"
+            android:text="卫生检查"
+            />
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:textColor="@color/gray"
+            android:layout_marginLeft="20dp"
+            android:textSize="17sp"
+            android:text="阳台："
+            />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/ischeck_balcony"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="right|bottom"
+            android:scrollbarSize="20sp"/>
+    </FrameLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:background="@color/white"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:textColor="@color/gray"
+            android:layout_marginLeft="20dp"
+            android:textSize="17sp"
+            android:text="窗户："
+            />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/ischeck_windowscheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="20dp"
+            android:scrollbarSize="20sp"/>
+    </FrameLayout>
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:background="@color/white"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:textColor="@color/gray"
+            android:layout_marginLeft="20dp"
+            android:textSize="17sp"
+            android:text="厕所："
+            />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/ischeck_wc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="20dp"
+            android:scrollbarSize="20sp"/>
+    </FrameLayout>
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:background="@color/white"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="top|left"
+            android:textSize="20sp"
+            android:text="安全检查"
+            />
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:textColor="@color/gray"
+            android:layout_marginLeft="20dp"
+            android:textSize="17sp"
+            android:text="违规电器："
+            />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/ischeck_safe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="20dp"
+            android:scrollbarSize="20sp"/>
+    </FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"/>
+
+
+<Button
+    android:id="@+id/btn_save"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape"
+    android:layout_marginLeft="60dp"
+    android:layout_marginTop="70dp"
+    android:text="保存"
+    android:layout_marginRight="60dp"/>
+
+
+
+</LinearLayout>
