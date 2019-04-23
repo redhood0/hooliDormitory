@@ -9,7 +9,6 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.hooli.hooli.R;
-import com.hooli.hooli.R2;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -24,7 +23,7 @@ import androidx.fragment.app.Fragment;
 import butterknife.BindView;
 
 
-public class Fragment_homepage extends Fragment {
+public class HomePageFragment extends Fragment {
 
     View myZhuYeView;
     List<Integer> ImageUrlData;
@@ -37,9 +36,9 @@ public class Fragment_homepage extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragmen_homepage, null);
+        View view = inflater.inflate(R.layout.fragment_homepage, null);
         myBanner = view.findViewById(R.id.banner);
-        myZhuYeView = LayoutInflater.from(getActivity()).inflate(R.layout.fragmen_homepage, container, false);
+        myZhuYeView = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_homepage, container, false);
 
         initBanner();
         return view;

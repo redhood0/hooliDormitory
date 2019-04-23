@@ -1,4 +1,4 @@
-package com.hooli.hooli.controller;
+package com.hooli.hooli.activity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -15,11 +15,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 
 
-public class Givefen_check extends AppCompatActivity {
+public class GiveScoreActivity extends AppCompatActivity {
 
     @BindView(R.id.btn_save)
     Button btn_save;
@@ -62,7 +61,7 @@ public
 //        $iswc = ischeck_wc.isChecked();//
 //        $iswindow = ischeck_window.isChecked();//
 //        if ($iswindow && $iswc && $issafe && $isbalcony) {
-//            Toast.makeText(Givefen_check.this, "合格", Toast.LENGTH_LONG).show();
+//            Toast.makeText(GiveScoreActivity.this, "合格", Toast.LENGTH_LONG).show();
 //        }
 //    }
 
@@ -71,11 +70,11 @@ public
     @OnClick(R.id.btn_save)
   void onClick(View view) {
         if ($isbalcony && $issafe && $iswc && $iswindow) {
-            Toast.makeText(Givefen_check.this, "合格", Toast.LENGTH_LONG);
+            Toast.makeText(GiveScoreActivity.this, "合格", Toast.LENGTH_LONG);
             finish();
         } else {
             AlertDialog.Builder normalDialog =
-                    new AlertDialog.Builder(Givefen_check.this);
+                    new AlertDialog.Builder(GiveScoreActivity.this);
             normalDialog.setIcon(R.drawable.icon);
             normalDialog.setTitle("通知").setMessage("是否拍照");
             normalDialog.setPositiveButton("是",
@@ -112,7 +111,7 @@ public
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.givefraction_check);
+        setContentView(R.layout.activity_give_score);
         ButterKnife.bind(this);
         btn_save = findViewById(R.id.btn_save);
         ischeck_balcory = findViewById(R.id.ischeck_balcony);
@@ -133,7 +132,7 @@ public
         $iswc = ischeck_wc.isChecked();//
         $iswindow = ischeck_window.isChecked();//
         if ($iswindow && $iswc && $issafe && $isbalcony) {
-            Toast.makeText(Givefen_check.this, "合格", Toast.LENGTH_LONG).show();
+            Toast.makeText(GiveScoreActivity.this, "合格", Toast.LENGTH_LONG).show();
         }
 
             }
@@ -146,7 +145,7 @@ public
                 $iswc = ischeck_wc.isChecked();//
                 $iswindow = ischeck_window.isChecked();//
                 if ($iswindow && $iswc && $issafe && $isbalcony) {
-                    Toast.makeText(Givefen_check.this, "合格", Toast.LENGTH_LONG).show();
+                    Toast.makeText(GiveScoreActivity.this, "合格", Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -159,7 +158,7 @@ ischeck_safe.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener
         $iswc = ischeck_wc.isChecked();//
         $iswindow = ischeck_window.isChecked();//
         if ($iswindow && $iswc && $issafe && $isbalcony) {
-            Toast.makeText(Givefen_check.this, "合格", Toast.LENGTH_LONG).show();
+            Toast.makeText(GiveScoreActivity.this, "合格", Toast.LENGTH_LONG).show();
         }
 
     }
@@ -172,7 +171,7 @@ ischeck_balcory.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListe
         $iswc = ischeck_wc.isChecked();//
         $iswindow = ischeck_window.isChecked();//
         if ($iswindow && $iswc && $issafe && $isbalcony) {
-            Toast.makeText(Givefen_check.this, "合格", Toast.LENGTH_LONG).show();
+            Toast.makeText(GiveScoreActivity.this, "合格", Toast.LENGTH_LONG).show();
         }
 
     }

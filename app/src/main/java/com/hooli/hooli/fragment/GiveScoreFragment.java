@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.hooli.hooli.R;
 import com.hooli.hooli.R2;
-import com.hooli.hooli.controller.Givefen_check;
+import com.hooli.hooli.activity.GiveScoreActivity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,7 +25,7 @@ import butterknife.OnTextChanged;
 import butterknife.Unbinder;
 
 
-public class Fragment_givefraction_choose extends Fragment {
+public class GiveScoreFragment extends Fragment {
     private Unbinder unbinder;
 
     @BindView(R.id.btn_startGiveMark)
@@ -84,14 +84,14 @@ public class Fragment_givefraction_choose extends Fragment {
     @OnClick(R2.id.btn_startGiveMark)
     void showIntent() {
         Intent intent = new Intent();
-        intent.setClass(getActivity(), Givefen_check.class);
+        intent.setClass(getActivity(), GiveScoreActivity.class);
         getActivity().startActivity(intent);
     }
 
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_givefen_choose, null);
+        View view = inflater.inflate(R.layout.fragment_give_score, null);
 
 
         //----绑定黄油刀-------------------------------------

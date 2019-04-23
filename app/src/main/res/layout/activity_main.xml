@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray_dark"
-    tools:context=".controller.MainActivity">
+    tools:context=".activity.MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,7 +13,7 @@
         android:orientation="vertical">
         <fragment
             android:id="@+id/fragment_main_page"
-            android:name="com.hooli.hooli.fragment.Fragment_givefraction_choose"
+            android:name="com.hooli.hooli.fragment.GiveScoreFragment"
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="match_parent"

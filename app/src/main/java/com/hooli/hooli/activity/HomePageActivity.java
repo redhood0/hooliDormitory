@@ -1,4 +1,4 @@
-package com.hooli.hooli.controller;
+package com.hooli.hooli.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import com.hooli.hooli.R;
 
-public class HomePageController  extends AppCompatActivity implements View.OnClickListener {
+public class HomePageActivity extends AppCompatActivity implements View.OnClickListener {
     public Button btn_camera;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class HomePageController  extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(HomePageController.this,CameraController.class);
+        Intent intent = new Intent(HomePageActivity.this, CameraActivity.class);
         startActivity(intent);
     }
 }

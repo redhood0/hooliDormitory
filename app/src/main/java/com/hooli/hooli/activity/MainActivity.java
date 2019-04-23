@@ -1,9 +1,6 @@
-package com.hooli.hooli.controller;
+package com.hooli.hooli.activity;
 
 
-import android.graphics.BlurMaskFilter;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -12,8 +9,8 @@ import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 import com.google.android.material.navigation.NavigationView;
 import com.hooli.hooli.R;
-import com.hooli.hooli.fragment.Fragment_givefraction_choose;
-import com.hooli.hooli.fragment.Fragment_homepage;
+import com.hooli.hooli.fragment.GiveScoreFragment;
+import com.hooli.hooli.fragment.HomePageFragment;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -41,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity);
+        setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         FragmentManager fm = getSupportFragmentManager();
         final FragmentTransaction ft = fm.beginTransaction();
@@ -53,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.nav_first_fragment:
-                        ft.remove(new Fragment_givefraction_choose());
-                        ft.replace(R.id.fragment_main_page, new Fragment_homepage()).commit();
+                        ft.remove(new GiveScoreFragment());
+                        ft.replace(R.id.fragment_main_page, new HomePageFragment()).commit();
                         Toast.makeText(MainActivity.this, "加载主页面", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_second_fragment:
@@ -68,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.nav_home_ischeck:
                         Toast.makeText(MainActivity.this, "打分页面张开", Toast.LENGTH_LONG).show();
-                        ft.remove(new Fragment_homepage());
-                        ft.replace(R.id.fragment_main_page, new Fragment_givefraction_choose());
+                        ft.remove(new HomePageFragment());
+                        ft.replace(R.id.fragment_main_page, new GiveScoreFragment());
                         ft.commit();
                         break;
                     case R.id.nav_home_giveFraction:

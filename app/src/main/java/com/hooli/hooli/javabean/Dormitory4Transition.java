@@ -1,16 +1,20 @@
 package com.hooli.hooli.javabean;
 
-import java.util.ArrayList;
+import java.io.Serializable;
+import java.util.HashMap;
 
-public class Dormitory{
+/**
+ * @author cky
+ * 2019.4.19
+ */
+public class Dormitory4Transition implements Serializable {
     private int dormId;//宿舍id
     private String building;//楼名
     private String buildingNum;//楼号
     private String floor;//楼层
     private String dormitoryNum;//宿舍号
     private String dormitoryHead;//宿舍长
-    //宿舍学生
-    private ArrayList students = new ArrayList<>();
+    private HashMap<String, String> health;
 
     public int getDormId() {
         return dormId;
@@ -52,6 +56,19 @@ public class Dormitory{
         this.dormitoryNum = dormitoryNum;
     }
 
+    public String getDormitoryHead() {
+        return dormitoryHead;
+    }
 
+    public void setDormitoryHead(String dormitoryHead) {
+        this.dormitoryHead = dormitoryHead;
+    }
 
+    public HashMap<String, String> getHealth() {
+        return health;
+    }
+
+    public void setHealth(HashMap<String, String> health) {
+        this.health = health;
+    }
 }

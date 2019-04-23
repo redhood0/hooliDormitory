@@ -1,4 +1,4 @@
-package com.hooli.hooli.controller;
+package com.hooli.hooli.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -16,7 +16,7 @@ import java.io.IOException;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CameraController extends AppCompatActivity implements View.OnClickListener {
+public class CameraActivity extends AppCompatActivity implements View.OnClickListener {
     public static final int TAKE_PHOTO = 1;
     public static final int CROP_PHOTO = 2;
     private Button btn_takephote;
@@ -52,7 +52,7 @@ public class CameraController extends AppCompatActivity implements View.OnClickL
             e.printStackTrace();
         }
 
-//        imageUri= FileProvider.getUriForFile(CameraController.this,
+//        imageUri= FileProvider.getUriForFile(CameraActivity.this,
 //                "com.example.cameraalbumtest.fileprovider", outputImage);
                     /*
                     第一个参数：context对象
