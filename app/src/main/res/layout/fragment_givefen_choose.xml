@@ -23,6 +23,7 @@
         android:textColor="@color/white" />
 
     <Spinner
+        android:id="@+id/spiner_select_building"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -41,6 +42,7 @@
         android:textColor="@color/white" />
 
     <Spinner
+        android:id="@+id/spiner_select_floor"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -50,7 +52,7 @@
     </Spinner>
 
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -58,20 +60,22 @@
         android:textColor="@color/gray_dark">
 
         <EditText
+            android:id="@+id/et_getRoomNum"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
+            android:maxLength="4"
             android:layout_gravity="center"
             android:hint="输入房间号"
             android:inputType="number"
             android:lines="1" />
 
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
+        android:id="@+id/text_getSelect"
         android:layout_marginTop="20dp"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:theme="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -79,12 +83,12 @@
 
 
     <Button
-        android:id="@+id/btn_startGivefen"
+        android:id="@+id/btn_startGiveMark"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="60dp"
-        android:background="@drawable/shape_red"
+        android:background="@drawable/button_select_blue_square"
         android:text="开 始 检 查 打 分" />
     <!--打分完背景色变成蓝色-->
 
@@ -95,3 +99,5 @@
         android:layout_marginTop="20dp"
         android:text="可以重新打分哦！" />
 </LinearLayout>
+
+

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/gray_dark"
     android:orientation="vertical"
     tools:context=".Login_Activity">
@@ -10,6 +11,20 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <com.jetradarmobile.snowfall.SnowfallView
+            android:layout_width="match_parent"
+            android:layout_height="167dp"
+            app:snowflakesNum="250"
+            app:snowflakeAlphaMin="150"
+            app:snowflakeAlphaMax="255"
+            app:snowflakeAngleMax="5"
+            app:snowflakeSizeMin="8dp"
+            app:snowflakeSizeMax="32dp"
+            app:snowflakeSpeedMin="2"
+            app:snowflakeSpeedMax="5"
+            app:snowflakesFadingEnabled="true"
+            app:snowflakesAlreadyFalling="false"
+            app:snowflakeImage="@drawable/snow"/>
 
 
         <ImageView
@@ -38,7 +53,7 @@
         android:layout_gravity="center"
         android:orientation="vertical">
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_username"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
@@ -55,9 +70,9 @@
                 android:inputType="text"
                 android:lines="1"
                 android:textColorHint="@color/white" />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_password"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
@@ -74,7 +89,7 @@
                 android:lines="1"
                 android:password="true"
                 android:textColorHint="@color/white" />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <CheckBox
             android:id="@+id/ischeck_password"
@@ -118,7 +133,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/shape"
+                android:background="@drawable/butten_select_blue_round"
                 android:text="登 陆"
                 android:textColor="@color/white" />
 
