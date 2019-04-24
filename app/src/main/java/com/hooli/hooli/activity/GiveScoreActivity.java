@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hooli.hooli.R;
+import com.hooli.hooli.javabean.DayRecord4Transition;
 import com.hooli.hooli.javabean.Dormitory4Transition;
 import com.suke.widget.SwitchButton;
 import com.tapadoo.alerter.Alerter;
@@ -36,8 +37,13 @@ public class GiveScoreActivity extends AppCompatActivity implements SwitchButton
     SwitchButton ischeck_window;
 
     TextView tvShowData;
+    TextView tvBalcony;
+    TextView tvGround;
+    TextView tvWc;
+    TextView tvSafe;
 
     Dormitory4Transition dormitory;
+    DayRecord4Transition dayRecord4Transition = new DayRecord4Transition();
 //-------获取布局元素------
 
     Boolean $issafe;//违规电器
@@ -66,7 +72,7 @@ public class GiveScoreActivity extends AppCompatActivity implements SwitchButton
     @OnClick(R.id.btn_save)
     void onClick(View view) {
         if ($isbalcony && $issafe && $iswc && $isground) {
-            Toast.makeText(GiveScoreActivity.this, "合格", Toast.LENGTH_LONG);
+            Toast.makeText(GiveScoreActivity.this, "合格", Toast.LENGTH_SHORT);
             finish();
         } else {
             AlertDialog.Builder normalDialog =
@@ -98,11 +104,29 @@ public class GiveScoreActivity extends AppCompatActivity implements SwitchButton
                     .setIcon(R.drawable.icon)
                     .setIconColorFilter(0) //
                     .show();
-
         }
+
+        showIntent();
 
 
     }
+
+    //传出数据
+    void showIntent() {
+        tvBalcony = findViewById(R.id.tv_balcony);
+        tvGround  = findViewById(R.id.tv_ground);
+        tvWc = findViewById(R.id.tv_wc);
+        tvSafe = findViewById(R.id.tv_safe);
+
+        dayRecord4Transition.setBalcony($isbalcony);
+        dayRecord4Transition.setWc($iswc);
+        dayRecord4Transition.setGround($isground);
+        dayRecord4Transition.setIllegalAppliances($issafe);
+
+        Intent intent = new Intent();
+        intent.putExtra("checkedData",dormitory);
+    }
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -110,11 +134,12 @@ public class GiveScoreActivity extends AppCompatActivity implements SwitchButton
         setContentView(R.layout.activity_give_score);
         tvShowData = findViewById(R.id.tv_show_data);
 
-        //TODO 213123123123123123
+        //接受数据  动态显示
         dormitory = (Dormitory4Transition) getIntent().getSerializableExtra("buildData");
-        System.out.println(dormitory.getBuilding()+dormitory.getBuildingNum()+dormitory.getDormitoryNum()+"12312312312323123123123123123123");
-        String showText = dormitory.getBuilding()+dormitory.getBuildingNum()+dormitory.getDormitoryNum();
+        String showText = dormitory.getBuilding()+" "+dormitory.getBuildingNum()+" "+dormitory.getDormitoryNum();
         tvShowData.setText(showText);
+
+
 
         ButterKnife.bind(this);
         btn_save = findViewById(R.id.btn_save);
@@ -132,6 +157,7 @@ public class GiveScoreActivity extends AppCompatActivity implements SwitchButton
         ischeck_wc.setOnCheckedChangeListener(this);
         ischeck_safe.setOnCheckedChangeListener(this);
         ischeck_balcory.setOnCheckedChangeListener(this);
+
 
     }
 

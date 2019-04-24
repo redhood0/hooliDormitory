@@ -79,7 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="当前选择：雪松苑 A2 309"/>
+        android:text="当前选择：雪松苑 A1"/>
 
 
     <Button

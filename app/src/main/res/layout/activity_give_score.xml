@@ -20,6 +20,7 @@
         android:text=""
         />
     <TextView
+        android:id="@+id/tv_show_head_dorm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|right"
@@ -48,11 +49,11 @@
             android:text="卫生检查"
             />
         <TextView
+            android:id="@+id/tv_balcony"
             android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left"
-
             android:layout_marginLeft="20dp"
             android:textSize="17sp"
             android:text="阳台："
@@ -80,6 +81,8 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/tv_ground"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left"
@@ -111,10 +114,10 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/tv_wc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left"
-
             android:layout_marginLeft="20dp"
             android:textSize="17sp"
             android:text="厕所："
@@ -152,6 +155,7 @@
             />
 
         <TextView
+            android:id="@+id/tv_safe"
             android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
