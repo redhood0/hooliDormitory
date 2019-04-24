@@ -113,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
         bottomNavigationBar.setBarBackgroundColor(R.color.white);//
         bottomNavigationBar.hide(false);
+        bottomNavigationBar.setActiveColor(R.color.darkness);
         bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
             //todo---------添加选项卡切换事件监听-----------------
             @Override

@@ -49,15 +49,15 @@ public class HomePageFragment extends Fragment {
         ImageUrlData = new ArrayList<>();
         ContentData = new ArrayList<>();
         //todo----------载入图片--------------
-        ImageUrlData.add(R.drawable.icon);
-        ImageUrlData.add(R.drawable.icon);
-        ImageUrlData.add(R.drawable.icon);
-        ImageUrlData.add(R.drawable.icon);
+        ImageUrlData.add(R.drawable.image5);
+        ImageUrlData.add(R.drawable.image10);
+        ImageUrlData.add(R.drawable.image11);
+        ImageUrlData.add(R.drawable.image12);
         //todo----设置图片介绍--------------
-        ContentData.add("1");
-        ContentData.add("2");
-        ContentData.add("3");
-        ContentData.add("4");
+        ContentData.add("最美宿舍评选结果出炉");
+        ContentData.add("308插画作品入选一等奖");
+        ContentData.add("今日图书推荐");
+        ContentData.add("我们该如何面对未来");
         myBanner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE);
         myBanner.setImageLoader(new MyLoader());
         myBanner.setImages(ImageUrlData);

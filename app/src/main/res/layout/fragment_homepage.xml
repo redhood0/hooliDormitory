@@ -1,65 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="200dp">
 
 
-
-        <com.youth.banner.Banner
-            xmlns:app="http://schemas.android.com/apk/res-auto"
+        <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/banner"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-         />
+            android:layout_height="200dp" />
 
 
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
-        <Button
-        android:id="@+id/btn_sign_on"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="45dp"
-        android:background="@drawable/button_select_blue_square"
-        android:text="签到"
 
-        />
         <Button
-            android:id="@+id/btn_Ranking"
+            android:id="@+id/btn_sign_on"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="45dp"
+            android:layout_weight="1"
             android:background="@drawable/button_select_blue_square"
             android:text="签到"
 
             />
 
         <Button
+            android:id="@+id/btn_life"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
             android:layout_weight="1"
+            android:background="@drawable/button_select_blue_square"
+            android:text="生活"
+
+            />
+
+        <Button
             android:id="@+id/btn_information"
             android:layout_width="0dp"
             android:layout_height="45dp"
+            android:layout_weight="1"
             android:background="@drawable/button_select_blue_square"
             android:text="私信" />
 
         <Button
             android:id="@+id/btn_Lost_and_found"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="45dp"
+            android:layout_weight="1"
             android:background="@drawable/button_select_blue_square"
             android:text="失物招领" />
 
@@ -72,6 +74,7 @@
         android:gravity="center"
         android:orientation="vertical">
 
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -88,7 +91,7 @@
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/icon" />
+                    android:background="@drawable/image5" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -101,7 +104,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="特别通知"
+                        android:textColor="@color/gray"
+                        android:text="校园最美宿舍评比"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -111,7 +115,7 @@
                         android:layout_marginTop="5dp"
                         android:ellipsize="end"
                         android:lines="4"
-                        android:text="A4 207宿舍的刘通与张龙龙喜结良缘，在此特开一个栏目祝贺"
+                       android:text="四月份已经接近尾声，月季宿舍评比已经结束，那么哪个宿舍会被评为最美宿舍呢"
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -133,7 +137,7 @@
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/icon" />
+                    android:background="@drawable/image6" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -146,7 +150,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="特别通知"
+                        android:textColor="@color/gray"
+                        android:text="论宿舍整洁的体验"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -156,7 +161,7 @@
                         android:layout_marginTop="5dp"
                         android:ellipsize="end"
                         android:lines="4"
-                        android:text="A4 207宿舍的刘通与张龙龙喜结良缘，在此特开一个栏目祝贺"
+                        android:text="总是被要求保持宿舍的整洁，但我们为什么要保持宿舍的整洁卫生？让我们听308的赵乾同学怎么说"
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -181,7 +186,7 @@
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="100dp"
-                    android:background="@drawable/icon" />
+                    android:background="@drawable/image7" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -194,7 +199,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="特别通知"
+                        android:text="307与盆景"
+                        android:textColor="@color/gray"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -204,7 +210,7 @@
                         android:layout_marginTop="5dp"
                         android:ellipsize="end"
                         android:lines="4"
-                        android:text="A4 207宿舍的刘通与张龙龙喜结良缘，在此特开一个栏目祝贺"
+                        android:text="在本校的艺术节，307的盆景喜获特等奖，我们来深入了解307的刘通同学与绿色的故事"
                         android:textSize="14sp" />
 
                 </LinearLayout>
@@ -212,9 +218,59 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            app:contentPadding="5dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/image9" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="第二届雪松苑摄影大赛"
+                        android:textColor="@color/gray"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:lines="4"
+                        android:text="我苑第二届摄影大赛正式开始报名，主题：校园晨光，有意同学请找李大壮阿姨报名"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
 </LinearLayout>
+
+
+
+</ScrollView>
