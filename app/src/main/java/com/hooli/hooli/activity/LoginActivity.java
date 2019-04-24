@@ -35,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
+
     @OnClick({R2.id.bt_loginIn})
     public void onViewClicked(View view) {
         switch (view.getId()) {

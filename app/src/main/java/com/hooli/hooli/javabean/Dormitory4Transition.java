@@ -11,7 +11,7 @@ public class Dormitory4Transition implements Serializable {
     private int dormId;//宿舍id
     private String building;//楼名
     private String buildingNum;//楼号
-    private String floor;//楼层
+//    private String floor;//楼层
     private String dormitoryNum;//宿舍号
     private String dormitoryHead;//宿舍长
     private HashMap<String, String> health;
@@ -40,13 +40,13 @@ public class Dormitory4Transition implements Serializable {
         this.buildingNum = buildingNum;
     }
 
-    public String getFloor() {
-        return floor;
-    }
-
-    public void setFloor(String floor) {
-        this.floor = floor;
-    }
+//    public String getFloor() {
+//        return floor;
+//    }
+//
+//    public void setFloor(String floor) {
+//        this.floor = floor;
+//    }
 
     public String getDormitoryNum() {
         return dormitoryNum;

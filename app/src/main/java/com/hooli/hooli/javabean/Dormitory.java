@@ -9,6 +9,7 @@ public class Dormitory{
     private String floor;//楼层
     private String dormitoryNum;//宿舍号
     private String dormitoryHead;//宿舍长
+
     //宿舍学生
     private ArrayList students = new ArrayList<>();
 

@@ -1,24 +1,28 @@
 package com.hooli.hooli.activity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hooli.hooli.R;
+import com.hooli.hooli.javabean.Dormitory4Transition;
 import com.suke.widget.SwitchButton;
 import com.tapadoo.alerter.Alerter;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class GiveScoreActivity extends AppCompatActivity {
+public class GiveScoreActivity extends AppCompatActivity implements SwitchButton.OnCheckedChangeListener{
 
     @BindView(R.id.btn_save)
     Button btn_save;
@@ -28,14 +32,18 @@ public class GiveScoreActivity extends AppCompatActivity {
     SwitchButton ischeck_wc;
     @BindView(R.id.ischeck_safe)
     SwitchButton ischeck_safe;
-    @BindView(R.id.ischeck_windowscheck)
+    @BindView(R.id.ischeck_groundcheck)
     SwitchButton ischeck_window;
+
+    TextView tvShowData;
+
+    Dormitory4Transition dormitory;
 //-------获取布局元素------
 
     Boolean $issafe;//违规电器
     Boolean $isbalcony;//阳台
     Boolean $iswc;//厕所
-    Boolean $iswindow;//窗户
+    Boolean $isground;//地面
 
     public Boolean get$isbalcony() {
         return $isbalcony;
@@ -50,26 +58,14 @@ public class GiveScoreActivity extends AppCompatActivity {
     }
 
     public Boolean get$iswindow() {
-        return $iswindow;
+        return $isground;
     }
-public
-//    @OnCheckedChanged({R.id.ischeck_windowscheck, R.id.ischeck_safe, R.id.ischeck_wc, R.id.ischeck_balcony})
-//    void showToast() {
-//        //更新数据
-//        $issafe = ischeck_safe.isChecked();//
-//        $isbalcony = ischeck_balcory.isChecked();//
-//        $iswc = ischeck_wc.isChecked();//
-//        $iswindow = ischeck_window.isChecked();//
-//        if ($iswindow && $iswc && $issafe && $isbalcony) {
-//            Toast.makeText(GiveScoreActivity.this, "合格", Toast.LENGTH_LONG).show();
-//        }
-//    }
 
 
 
     @OnClick(R.id.btn_save)
-  void onClick(View view) {
-        if ($isbalcony && $issafe && $iswc && $iswindow) {
+    void onClick(View view) {
+        if ($isbalcony && $issafe && $iswc && $isground) {
             Toast.makeText(GiveScoreActivity.this, "合格", Toast.LENGTH_LONG);
             finish();
         } else {
@@ -81,7 +77,7 @@ public
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            // ...To-do
+                            //Todo
                             finish();
                         }
                     });
@@ -89,7 +85,7 @@ public
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            // ...To-do
+                            //Todo
                             finish();
                         }
                     });
@@ -112,70 +108,43 @@ public
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_give_score);
+        tvShowData = findViewById(R.id.tv_show_data);
+
+        //TODO 213123123123123123
+        dormitory = (Dormitory4Transition) getIntent().getSerializableExtra("buildData");
+        System.out.println(dormitory.getBuilding()+dormitory.getBuildingNum()+dormitory.getDormitoryNum()+"12312312312323123123123123123123");
+        String showText = dormitory.getBuilding()+dormitory.getBuildingNum()+dormitory.getDormitoryNum();
+        tvShowData.setText(showText);
+
         ButterKnife.bind(this);
         btn_save = findViewById(R.id.btn_save);
         ischeck_balcory = findViewById(R.id.ischeck_balcony);
         ischeck_safe = findViewById(R.id.ischeck_safe);
         ischeck_wc = findViewById(R.id.ischeck_wc);
-        ischeck_window = findViewById(R.id.ischeck_windowscheck);
-        //--------------
+        ischeck_window = findViewById(R.id.ischeck_groundcheck);
+
         $issafe = ischeck_safe.isChecked();//违规电器
         $isbalcony = ischeck_balcory.isChecked();//阳台
         $iswc = ischeck_wc.isChecked();//厕所
-        $iswindow = ischeck_window.isChecked();//窗户
-        ischeck_window.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(SwitchButton view, boolean isChecked) {
-                     //更新数据
-        $issafe = ischeck_safe.isChecked();//
-        $isbalcony = ischeck_balcory.isChecked();//
-        $iswc = ischeck_wc.isChecked();//
-        $iswindow = ischeck_window.isChecked();//
-        if ($iswindow && $iswc && $issafe && $isbalcony) {
-            Toast.makeText(GiveScoreActivity.this, "合格", Toast.LENGTH_LONG).show();
-        }
+        $isground = ischeck_window.isChecked();//地面
 
-            }
-        });
-        ischeck_wc.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(SwitchButton view, boolean isChecked) {
-                $issafe = ischeck_safe.isChecked();//
-                $isbalcony = ischeck_balcory.isChecked();//
-                $iswc = ischeck_wc.isChecked();//
-                $iswindow = ischeck_window.isChecked();//
-                if ($iswindow && $iswc && $issafe && $isbalcony) {
-                    Toast.makeText(GiveScoreActivity.this, "合格", Toast.LENGTH_LONG).show();
-                }
+        ischeck_window.setOnCheckedChangeListener(this);
+        ischeck_wc.setOnCheckedChangeListener(this);
+        ischeck_safe.setOnCheckedChangeListener(this);
+        ischeck_balcory.setOnCheckedChangeListener(this);
 
-            }
-        });
-ischeck_safe.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
+    }
+
+
+
     @Override
     public void onCheckedChanged(SwitchButton view, boolean isChecked) {
         $issafe = ischeck_safe.isChecked();//
         $isbalcony = ischeck_balcory.isChecked();//
         $iswc = ischeck_wc.isChecked();//
-        $iswindow = ischeck_window.isChecked();//
-        if ($iswindow && $iswc && $issafe && $isbalcony) {
-            Toast.makeText(GiveScoreActivity.this, "合格", Toast.LENGTH_LONG).show();
+        $isground = ischeck_window.isChecked();//
+        if (!$isground || !$iswc || !$issafe || !$isbalcony) {
+            Toast.makeText(GiveScoreActivity.this, "不合格", Toast.LENGTH_SHORT).show();
         }
-
-    }
-});
-ischeck_balcory.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
-    @Override
-    public void onCheckedChanged(SwitchButton view, boolean isChecked) {
-        $issafe = ischeck_safe.isChecked();//
-        $isbalcony = ischeck_balcory.isChecked();//
-        $iswc = ischeck_wc.isChecked();//
-        $iswindow = ischeck_window.isChecked();//
-        if ($iswindow && $iswc && $issafe && $isbalcony) {
-            Toast.makeText(GiveScoreActivity.this, "合格", Toast.LENGTH_LONG).show();
-        }
-
-    }
-});
-
     }
 }

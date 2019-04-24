@@ -23,7 +23,7 @@
         android:textColor="@color/white" />
 
     <Spinner
-        android:id="@+id/spiner_select_building"
+        android:id="@+id/spinner_select_building"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -42,7 +42,7 @@
         android:textColor="@color/white" />
 
     <Spinner
-        android:id="@+id/spiner_select_floor"
+        android:id="@+id/spinner_select_buildingNum"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
