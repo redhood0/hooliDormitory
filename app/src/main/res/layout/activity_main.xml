@@ -11,24 +11,18 @@
         android:layout_height="match_parent"
         android:background="@color/gray_dark"
         android:orientation="vertical">
-        <fragment
-            android:id="@+id/fragment_main_page"
-            android:name="com.hooli.hooli.fragment.GiveScoreFragment"
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            />
+      <FrameLayout
+          android:id="@+id/fra_main"
+          android:layout_width="match_parent"
+          android:layout_weight="1"
+          android:layout_height="0dp">
 
-
-
-
-
+      </FrameLayout>
             <com.ashokvarma.bottomnavigation.BottomNavigationBar
                 android:layout_weight="0"
                 android:id="@+id/bottomNavigationBar_main_activity"
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
-
+                android:layout_height="60dp">
             </com.ashokvarma.bottomnavigation.BottomNavigationBar>
 
 

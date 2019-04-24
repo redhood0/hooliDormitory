@@ -10,7 +10,7 @@
     <style name="AppTheme_noBar" parent="Theme.Design.NoActionBar">
         <item name="android:windowNoTitle">true</item>
                 <item name="colorPrimary">@color/colorPrimary</item>
-                <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+                <item name="colorPrimaryDark">#00000000</item>
                 <item name="colorAccent">@color/colorAccent</item>
         <item name="actionMenuTextColor">@color/gray_dark</item>
     </style>

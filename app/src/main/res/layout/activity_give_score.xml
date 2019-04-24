@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_dark"
     android:orientation="vertical">
 
 
@@ -51,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left"
-            android:textColor="@color/gray"
+
             android:layout_marginLeft="20dp"
             android:textSize="17sp"
             android:text="阳台："
@@ -82,7 +83,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left"
-            android:textColor="@color/gray"
             android:layout_marginLeft="20dp"
             android:textSize="17sp"
             android:text="地面："
@@ -114,7 +114,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left"
-            android:textColor="@color/gray"
+
             android:layout_marginLeft="20dp"
             android:textSize="17sp"
             android:text="厕所："
@@ -156,7 +156,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|left"
-            android:textColor="@color/gray"
             android:layout_marginLeft="20dp"
             android:textSize="17sp"
             android:text="违规电器："
